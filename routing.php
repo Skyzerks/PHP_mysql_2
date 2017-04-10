@@ -3,12 +3,12 @@
 //echo __FILE__.' in progress'.'<br/>';
 
 $routs = [
-    'account'
+    'account',
+    'registration',
+    'login',
+    'logout',
 
 
-//    'login',
-//    'registration',
-//    'logout',
 //    'admin'
 ];
 
@@ -52,10 +52,10 @@ if( $_SERVER['REQUEST_URI'] != '/' ) {
         exit();
     }
 
-    if( $_action == 'admin' ) {
-        $_method = isset($_GET['method']) ? $_GET['method'] : null; //$_method = $_GET['method'] ?? null;
-        $_page = isset($_GET['page']) ? $_GET['page'] : 0;
-    }
+//    if( $_action == 'admin' ) {
+//        $_method = isset($_GET['method']) ? $_GET['method'] : null; //$_method = $_GET['method'] ?? null;
+//        $_page = isset($_GET['page']) ? $_GET['page'] : 0;
+//    }
 
 
 //    var_dump($urlArray);
@@ -63,7 +63,7 @@ if( $_SERVER['REQUEST_URI'] != '/' ) {
 //    echo '$_action= '.$_action.'<br/>';
 //    echo '$_subAction= '.$_subAction.'<br/>';
 //    echo '$_id= '.$_id.'<br/>';
-    
+
     //echo '<hr>';
     //exit();
 //    include_once "controller.php";

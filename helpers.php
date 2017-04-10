@@ -1,5 +1,10 @@
 <?php
 
+function balance($pdo, $data = []){
+    //TODO: balance
+}
+
+
 function cap($string, $type){
     echo '<br>'.$string.' '.$type.' does not exist'.'<br>';
 }
@@ -52,11 +57,11 @@ function view($_View, $data = []){
 }
 
 
-function buy_product($id)
-{
-    $_SESSION['basket'][]= $id;
-    $_SESSION['flash_msg'] = 'Added to basket';
-}
+//function buy_product($id)
+//{
+//    $_SESSION['basket'][]= $id;
+//    $_SESSION['flash_msg'] = 'Added to basket';
+//}
 function pagination( $pagesCount, $section ) {
 
     global $_page;

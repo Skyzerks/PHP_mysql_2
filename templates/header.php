@@ -31,10 +31,12 @@
 <!---->
 <?php
 if(isset($_SESSION['user_id'])) {
-    echo 'Logged in as:' . '<br/>';
-    echo $_SESSION['name'] . '<br/>';
-    echo $_SESSION['email'] . '<br/>';
-}
+    echo 'Logged in as:' . '<br/>';?>
+
+    <h3><?=$_SESSION['user_name'] ?></h3> <br/>
+    <h3><?=$_SESSION['balance'] ?></h3><br/>
+
+<?php }
 else {
     echo 'You are not logged in <br/>';
 }

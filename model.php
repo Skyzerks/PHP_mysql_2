@@ -1,6 +1,8 @@
 <?php
 
-$repositoryRoutes = [
+$model_routes = [
+    'account',
+    'main'
 //    'auth',
 //    'catalog',
 //    'user',
@@ -9,10 +11,10 @@ $repositoryRoutes = [
 //    'orders',
 //    'reviews'
 ];
-foreach ($repositoryRoutes as $route){
-    $path = 'repository/'.$route.'_repository.php';
+foreach ($model_routes as $route){
+    $path = 'models/'.$route.'_model.php';
     if(file_exists($path)) {
-        include_once 'repository/' . $route . '_repository.php';
+        include_once 'models/' . $route . '_model.php';
     }
     else{
         cap($path, 'file');
