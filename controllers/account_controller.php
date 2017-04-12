@@ -25,6 +25,7 @@ if(isset($_POST['method'])){
         case 'create_account':{
             //
             createAccount($pdo, $_POST['form']['description'], $_SESSION['user_id']);
+            $_SESSION['flash_msg'] = 'Account "'.$_POST['form']['description'].'" created';
 
             break;
         }
@@ -33,6 +34,7 @@ if(isset($_POST['method'])){
 //            var_dump($_POST['form']);
 //            exit();
             createTransaction($pdo, $_POST['form']);
+            $_SESSION['flash_msg'] = 'Transaction for "'.$_POST['form']['description'].'" created';
             
             break;
         }

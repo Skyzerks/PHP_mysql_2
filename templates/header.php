@@ -30,11 +30,10 @@
 <?php //} ?>
 <!---->
 <?php
-if(isset($_SESSION['user_id'])) {
-    echo 'Logged in as:' . '<br/>';?>
+if(isset($_SESSION['user_id'])) {?>
 
-    <h3><?=$_SESSION['user_name'] ?></h3> <br/>
-    <h3><?=$_SESSION['balance'] ?></h3><br/>
+    <?=$_SESSION['user_name'] ?><br/>
+    <?php if(isset($_SESSION['balance'])) echo $_SESSION['balance']; ?><br/>
 
 <?php }
 else {
@@ -42,9 +41,16 @@ else {
 }
 ?>
 <hr/>
-
-<a href="/"><button>Main page</button></a>
-<a href="/account"><button>Account</button></a>
+<nav >
+    <!-- Navbar content -->
+</nav>
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <a class="navbar-link" href="/">Home</a>
+        <a class="navbar-link" href="/account">Account</a>
+        <nav class="navbar navbar-light bg-faded">
+            <span class="text" >Navbar text with an inline element</span>
+        </nav>
+</nav>
 
 <!--<a href="/"><button>Main page</button></a>-->
 <!--<a href="/basket"><button>To cart</button></a>-->

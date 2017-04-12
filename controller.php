@@ -8,6 +8,9 @@ if(isset($_action)) {
             include_once "$controllerFileName";
         }
     }
+    else{
+        include_once 'controllers/main_controller.php';
+    }
 //    else {
 //        if($_SESSION['role']=='user')  {
 //

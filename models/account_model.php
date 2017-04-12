@@ -46,8 +46,9 @@ function createTransaction($pdo, $array){
     $category_id = $array['category_id'];
     $description = $array['description'];
     $created_at = date('Y-m-d H:i:s');
+    $price = $array['price'];
     $insert = $pdo->prepare("INSERT INTO `transactions`(`account_id`, `category_id`, `price`, `description`, `created_at`) VALUES (?,?,?,?,?)");
-    $res = $insert->execute(array($account_id, $category_id, $description, $created_at ));
+    $res = $insert->execute(array($account_id, $category_id, $price, $description, $created_at ));
 
 
     return $res;
